@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="demo">Heading1</h1>
+  <button onclick="info()">click</button>
+  <button onclick="red()">red</button>
+  <button onclick="blue()">blue</button>
+  <button onclick="green()">green</button>
+  <script>
+    function info()
+    {
+      document.getElementById("demo").innerHTML="Welcome to js"
+    }
+    function red()
+    {
+      document.getElementById("demo").style.color="red"
+    }
+    function blue()
+    {
+      document.getElementById("demo").style.color="blue"
+    }
+    function green()
+    {
+      document.getElementById("demo").style.color="green"
+    }
+    let e=document.createElement("h3")
+    let t=document.createTextNode("welcome to java")
+    //let t=document.createTextNode("how's your day?")
+    //e.appendChild(t)
+    console.log(t)
+  
+  </script>
+</body>
+</html>

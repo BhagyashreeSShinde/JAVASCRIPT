@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--area of circle,traingle,square-->
+  Enter radius<input type="text" id="cir"><br><br>
+  Enter height<input type="text" id="trai1"><br><br>
+  Enter base<input type="text" id="trai2"><br><br>
+  Enter side<input type="text" id="squa"><br><br>
+  <button onclick="circle()">Circle</button>
+  <button onclick="traingle()">Traingle</button>
+  <button onclick="square()">Square</button>
+  <h1 id="result"></h1>
+
+  <script>
+    function circle()
+    {
+      let r=document.getElementById("cir").value
+      let c=3.14*r*r
+      document.getElementById("result").innerHTML="Area of circle is:"+c
+    }
+    function traingle()
+    {
+      let h=document.getElementById("trai1").value
+      let b=document.getElementById("trai2").value
+      let t=1/2*h*b
+      document.getElementById("result").innerHTML="Area of traingle is:"+t
+    }
+    function square(){
+        let side=document.getElementById("squa").value
+        let s=side*side
+        document.getElementById("result").innerHTML="Area of square is:"+s
+    }
+  </script>
+</body>
+</html>

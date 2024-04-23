@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   Enter Amount<input type="text" id="amt"><br><br>
+  <button onclick="deposite()">Deposite</button>
+  <button onclick=" withdraw()">Withdraw</button>
+  <h1 id="result"></h1>
+  <script>
+    let balance=Number(prompt("Enter Amount"))
+      function deposite()
+      {
+          let amount=Number(document.getElementById("amt").value)
+          
+          let n3=balance+amount
+          document.getElementById("result").innerHTML=" after deposite value is:"+n3
+      }
+      function withdraw()
+      {
+          let amount=Number(document.getElementById("amt").value)
+          
+          let n3=balance-amount
+          document.getElementById("result").innerHTML=" after withdraw value is:"+n3
+      }
+  </script>
+</body>
+</html>

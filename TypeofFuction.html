@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <script>
+
+  
+//function without parameter
+  function fun_name()
+  {
+    document.write("hello"+"<br>")
+  }
+  fun_name()
+  fun_name()
+  fun_name()
+
+  
+  
+  //function with paramater
+   /*function show(a,b)
+   {
+    document.write("multilication is:"+(a*b))
+   }
+   show(25,28)
+   show(prompt("Enter first number"),prompt("Enter second number"))*/
+
+   
+   
+   //return function
+   /*function info()
+   {
+    return "welcome"
+   }
+  let z= info()
+  document.write(z+""+"<br>")
+  document.write(info())*/
+
+//closure function
+/*function outer()
+{
+  let name="hanumant"
+  document.write("name is:"+name+"<br>")
+  //document.write("surname is:"+surname+"<br>")
+  function inner()
+  {
+    let surname="karpe"
+    document.write("name is:"+name+"<br>")
+    document.write("surname is:"+surname+"<br>")
+
+  }
+  inner()
+}
+outer()
+*/
+
+//callback function
+function callback()
+{
+  document.write("it is callback fun"+"<br>")
+}
+function details(parm)
+{
+  document.write("it is detail fun")
+}
+details(callback())
+
+
+  //arrow function ()=>
+  /*let arr=()=>alert("It is arrow function")
+  arr()*/
+
+  /*let arr=(a,b)=>{
+    document.write("addition is:"+(a+b))
+  }
+  arr(3,2)*/
+
+  
+ </script> 
+</body>
+</html>

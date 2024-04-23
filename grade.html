@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var m1=Number(prompt("Enter m1 marks"))
+    var m2=Number(prompt("Enter M2 marks"))
+    let total=m1+m2
+    //document.write("addition is:"+z)
+    let per=total*100/200
+    if(per>90 && per<=100)
+    {
+      document.write("total is:"+total+"<br>"+"percentage is:"+per+"<br>"+"A+Grade")
+    }
+    else if(per>=80 && per<=90)
+    {
+      document.write("total is:"+total+"<br>"+"percentage is:"+per+"<br>"+"B+Grade")
+    }
+    else if(per>=70 &&  per<=80)
+    {
+      document.write("total is:"+total+"<br>"+"percentage is:"+per+"<br>"+"C+Grade")
+    }
+    else if(per>=60 &&  per<=70)
+    {
+      document.write("total is:"+total+"<br>"+"percentage is:"+per+"<br>"+"C+Grade")
+    }
+    else if(per>=50 &&  per<=60)
+    {
+      document.write("total is:"+total+"<br>"+"percentage is:"+per+"<br>"+"D+Grade")
+    }
+    else if(per>=40 &&  per<=50)
+    {
+      document.write("total is:"+total+"<br>"+"percentage is:"+per+"<br>"+"E +Grade")
+    }
+    else{
+      document.write("Failed")
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function traingle(h,b)
+    {
+      return new Promise((resolve,reject)=>{
+      let z=h*b/2
+      if(z)
+      {
+        resolve("area of traingle is:"+z)
+
+      }
+      else
+      {
+        reject("error value")
+      }
+        
+    })
+  }
+  traingle(2,3).then((res)=>document.write(res)).catch((err)=>document.write(err))
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+  //array is variable where you can store similar type of element.
+  //how wec define array
+  
+   /*const fruits = ["Apple", "Orange", "Apple", "Mango"];
+   let position = fruits.indexOf("Apple") + 1;
+   document.write(position) */
+
+  /*document.write(arr[0]+"<br>")
+  document.write(arr[1]+"<br>")
+  document.write(arr[2]+"<br>")*/
+
+
+
+  /*let arr=["hanumant","bhagyashree","karpe"]
+  for(let i=0;i<3;i++)
+  {
+    document.write(arr[i]+"<br>")
+  }*/
+ // let arr=["kiwi","banana","orange","apple","watermelon"]
+ // let arr=[3,4,5,6,7,8,9]
+  //let arr1=[67,88]
+ // arr.push(50)//add element at lastvposition in array
+  //arr.pop()//remove last element
+ // arr.shift()//remove the first element of the array
+ // arr.unshift()//add element at the first of array
+  //delete arr[3]//delete element according to index position
+  //let a=arr.join(".")///join with each element in the array for ex here 3.4.6.7.
+  //let a=arr.concat(arr1)//merge both 
+  //let a=arr.toString()
+  //let a= arr.slice(0,3) //slice array is used to extract the part of array
+  //let a=arr.splice(1,2)//(position,delete)//delete element
+  //arr.reverse()//REVERSE ORDER
+ // arr.sort()
+  //document.write(a) 
+  //document.write(arr) 
+
+
+
+  //array iteration method- foreach,map,filter
+//foreeach
+
+/*let arr1=[80,90,20,30,40,50]
+  let txt=""
+arr1.forEach(Show)
+function Show(value,index)
+{
+  txt+=index+":"+value+"<br>"
+}
+document.write(txt) */
+
+
+//map-new array
+/*let arr1=[80,90,20,30,40,50]
+  let txt=arr1.map(Show)
+function Show(value,index)
+{
+  return value*2
+}
+document.write(txt+"<br>")
+document.write(arr1)*/
+
+//Filter -filter according condition
+/*let arr1=[10,7,20,30,40,50]
+  let txt=arr1.filter(Show)
+function Show(value,index)
+{
+  return value>17
+}
+document.write(txt+"<br>")*/
+
+//search Method
+let arr=["ab","bc","cd","ef","ab"]
+//let s=arr.indexOf("bc")//return index 
+//let s=arr.lastIndexOf("ab")//return lastindexof specified element if we have same two element it return last index of ele
+let s=arr.includes("df")//if vailable return true otherwise false
+document.write(s)
+
+
+
+</script>
+</body>
+</html>

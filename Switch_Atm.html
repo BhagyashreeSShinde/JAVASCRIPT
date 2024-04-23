@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //ATM Machin
+    let atm=prompt("Enter your choice 'D' for deposit 'W' for withdraw")
+    var bal=5000;
+    switch(atm)
+    {
+      case 'D':
+        {
+          let amt=Number(prompt("Enter deposite amount"))
+          bal+=amt
+            document.write("Cash deposite successfully:"+bal)
+            break
+        }
+      case 'W':
+        {
+          let amt=Number(prompt("Enter withdraw amount"))
+          bal-=amt
+            document.write("Cash Withdraw successfully:"+bal)
+            break
+        }
+        default:
+          {
+              Document.write("no match found")
+              break
+          }
+    }
+
+  </script>
+</body>
+</html>

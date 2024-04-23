@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  #mytodo-list{
+    width: 600px;
+    text-align: center;
+    margin-top: 104px;
+  }
+  #uf{
+    display: none;
+  }
+  
+</style>
+</head>
+<body>
+  <!--Insert data-->
+  <div id="mytodo-list">
+  <form action="javascript:void(0);" id="cf">
+    <input type="text" id="add-task">
+    <input type="submit" onclick="insertdata()" value="add">
+  </form>
+  <!--Update Data-->
+  <form action="javascript:void(0);" id="uf">
+    <input type="text" id="update-task">
+    <input type="submit" value="update">
+  </form>
+  <table class="table table-center" width="600px">
+    <thead>
+      <tr>
+        <th>MY TO-DO-LIST</th>
+      </tr>
+    </thead>
+    <tbody id="mylist">
+
+    </tbody>
+  </table>
+</div>
+
+
+  <script>
+    let arr=["cofee","tea","books","soaf"]
+    function insertdata()
+    {
+      let itm=document.getElementById("add-task").value;
+      arr.push(itm);
+      showdata();
+    }
+    function showdata()
+    {
+      let data=" ";
+      for(let i=0;i<arr.length;i++)
+      {
+        data=data+'<tr>'
+          data=data+'<td>'+arr[i]+'</td>'
+          data=data+'<td><button class="btn btn-primary" onclick="update('+i+')">update</button></td>'
+          data=data+'<td><button class="btn btn-danger"onclick="deletedata('+i+')">delete</button></td>'
+          data=data+'</tr>'
+      }
+      document.getElementById("mylist").innerHTML=data;
+    }
+    function deletedata(id){
+
+        arr.splice(id,1);
+        showdata();
+    }
+    function update(id)
+    {
+      //when we click on update first line give form to us
+      document.getElementById("uf").style.display='block';
+      //when we click on 0 index 0 index value we can see on our input field
+      document.getElementById("update-task").value=arr[id];
+      //target on update form because when we click on it function will call
+      document.getElementById("uf").onsubmit=function()
+      {
+        //target text whatever we written
+        let task=document.getElementById("update-task").value;
+        //first id index se 1 value delete hogi aur task main jo input we passed it comes under it
+        arr.splice(id,1,task);
+        showdata();
+      } 
+
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

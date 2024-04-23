@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+  
+  let choice=prompt("Enter your choice 'AC' for Area of Circle 'AT' for Area of Traingle")
+  var area
+  
+  
+
+
+  switch(choice)
+  {
+    case 'AC':
+      {
+        let r=Number(prompt("Enter radius"))
+          area=3.14*r*r
+          document.write("Area of Circle is:"+area)
+          break
+      }
+      case 'AT':
+      {
+        let h=Number(prompt("Enter Height"))
+        let b=Number(prompt("Enter base"))
+        area=1/2*h*b;
+          document.write("Area of Traingle is:"+area)
+          break
+      }
+    
+      default:
+        {
+            Document.write("none")
+            break
+        }
+  }
+
+</script>
+</body>
+</html>

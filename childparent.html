@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="parent1">
+    <div id="parent2">
+      <h1 id="hd1">heading1</h1>
+      <h2 id="hd2">heading2</h2>
+      <h3 id="hd3">heading3</h3>
+    </div>
+  </div>
+  <script>
+  //document.getElementById("parent2").parentElement.style.backgroundColor="orange"
+    document.getElementById("hd1").parentElement.style.backgroundColor="pink"
+    document.getElementById("parent2").children[0].style.backgroundColor="red"
+    document.getElementById("parent2").children[1].style.backgroundColor="yellow"
+    document.getElementById("parent2").children[2].style.backgroundColor="green"
+  </script>
+</body>
+</html>

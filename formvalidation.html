@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--name is used for target element in form-->
+  <form name="myform" onsubmit="return validate()">
+    <input type="text" name="uname"> <br><br>
+    <input type="password" name="upass"> <br><br>
+    <input type="submit" value="submit">
+  </form>
+  <script>
+    function validate()
+    {
+      //tageting myform and uname upass runtime value get .value
+      let un=document.myform.uname.value
+      let up=document.myform.upass.value
+
+      if(un.length<2)
+      {
+        alert("username should be more than two character")
+        return false
+      }else if(up.length<5)
+      {
+        alert("userpass should be more than 5 character")
+      }else if(!up.match(/[0-9]/))
+      {
+        alert("password should be at least one digit")
+        return false
+      }else if(!up.match(/[#@$%&*!]/))
+      {
+        alert("userpass should be at least 1 special character character")
+      }
+      else if(!up.match(/[A-Z]/))
+      {
+        alert("userpass should be at least 1 uppercase")
+      }
+
+    }
+  </script>
+</body>
+</html>
